@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: #ccc;
+			margin: 0px;
+			padding: 0px;
+		}
+		.pantalla{
+			height: 568px;
+			overflow: hidden;
+			width: 320px;
+		}
+		.deslizador{
+			height: 568px;
+			float: left;
+			left: 0;
+			position: relative;
+			width: 700px;
+			-webkit-transition:all 1s ease-in-out;
+		}
+		.deslizador img{
+			height: 568px;
+			float: left;
+			position: relative;
+			widows: 320px;
+		}
+		.pantalla:hover .deslizador{
+			left: -320px;
+			-webkit-transition:all 1s ease-in-out;
+		}
+		img{
+			height: 568px;
+			width: 320px;
+		}
+		h1{
+			color: #c35;
+			font-size: 3em;
+			text-align: center;
+			text-shadow:3px 0px 2px #554;
+		}
+	</style>
+</head>
+<body>
+	<div class="pantalla">
+		<div class="deslizador">
+			<img src="1.jpg" alt="" title="Imagen 1">
+			<img src="2.jpg" alt="" title="Imagen 2">			
+		</div>
+	</div>
+</body>
+</html>
