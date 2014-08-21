@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background: #a45745;
+		}
+		img{
+			height: 150px;
+			width: 150px;
+		}
+		#contenedor{
+			margin-top: 150px;
+			margin-left: 100px;
+		}
+		#contenedor h1{
+			color: #dcdcdc;
+			font-family: arial;
+			font-size: 4em;
+			position: absolute;
+			transform:translate(200px,-180px);
+		}
+		#contenedor #controlador{
+			background: #cca576;
+			box-shadow: rgba(255,255,255,.2) 5px 5px 5px 25px inset;			
+			display: inline-block;
+			height: auto;
+			width: 50%;
+		}
+		#contenedor #controlador img{
+			-webkit-transform:translate(230px,-30px);
+		}
+		#contenedor #controlador h2{
+			color: #9f001c;
+			font-size: 2.3em;
+			font-family: arial;
+			font-weight: bold;
+			margin-top: 70px;
+			text-align: center;
+		}
+		#personlizacion{
+			background: #c34;
+			border-radius: .5em;
+			box-shadow: rgba(255,255,255,.2) -5px -5px 10px inset;
+			display: inline-block;
+			margin: 0 0 6em 2%;
+			padding: 1em 1em 0;
+			overflow: hidden;
+			vertical-align: top;
+			height: auto;
+			width: 40%;
+			transition:all 2s ease;
+		}
+		#personlizacion article{
+			background: rgba(255,255,255,0.9);
+			border-radius: .5em;
+			margin: 0 0 1em 0;
+			padding: .5em;
+			color: #333;
+		}
+		#personlizacion #color div{
+			border: 2px solid #ccc;
+			cursor: pointer;
+			display: inline-block;
+			height: 2em;
+			margin:  0.5em 1%;
+			opacity: 0.7;
+			vertical-align: top;
+			width: 27%;
+			transition:0.5s all ease;
+		}
+		#personlizacion #color div:hover {
+			border: 3px solid black;
+			opacity: 1;
+			transform:scale(1.1);
+		}
+		#personlizacion #color #amarillo{
+			background: #ffd024;
+		}
+		#personlizacion #color #azul{
+			background: #166ceb;
+		}
+		#personlizacion #color #blanco{
+			background: #dcdcdc;
+		}
+		#personlizacion #color #negro{
+			background: #121212;
+		}
+		#personlizacion #color #rojo{
+			background: #9f001c;
+		}
+		#personlizacion #color #verde{
+			background: #6eb944;
+		}
+	</style>
+</head>
+<body>
+	<section id="contenedor">
+		<h1>Elige el pajaro según su color</h1>
+		<section id="controlador">
+			<h2>Los pajaron cambiarán de color</h2>
+			<img src="pamarillo.png" title="Angry">	
+		</section>
+		<section id="personlizacion">
+			<article id="color">
+				<h2>Elije un color:</h2>
+				<div id="azul">&nbsp;</div>
+				<div id="amarillo">&nbsp;</div>
+				<div id="blanco">&nbsp;</div>
+				<div id="negro">&nbsp;</div>
+				<div id="rojo">&nbsp;</div>
+				<div id="verde">&nbsp;</div>				
+			</article>
+		</section>
+	</section>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",inicio);
+		function inicio(){
+			$("#color div").on("click",cambiarcolor);
+		}
+		function cambiarcolor(datos){
+			var color = datos.currentTarget.id;
+			if (color=="blanco") {
+				alert('No hay blanco xD')
+			}
+			$("#controlador img").attr("src","p"+color+".png");
+
+		}
+	</script>
+</body>
+</html>
